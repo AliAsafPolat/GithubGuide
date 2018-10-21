@@ -1,0 +1,66 @@
+git config --global user.name"AliAsafPolat" 
+git config --global user.email"aliasafpolat@hotmail.com" 
+
+
+
+git init	//Bulunduðum dosyayý git deposuna tanýtýr.
+
+ls -a 		//Bulunduðum yerdeki git deposunu görebilirim.
+
+git add .	//Dosyalarý git ile file arasýndaki yere yükler.Bütün hepsini** eðer " . " yerine dosya ismi yazarsak sadece dosyayý yükler. 
+
+git commit -m "First commit"	//Dosyalarý commit eder. Ad olarak First Commit belirler.
+
+git log 	//Komutu ile commitlerimi görüntüleyebilirim.
+
+git status	//Mevcut file ile git deposunun güncelliðini kontrol edebilirim.
+
+git diff	//Dosyalarda yapýlan deðiþiklikleri gösteriyor.
+		//Deðiþikliklerden sonra git add . ve git commit -m "  "  yapýnca deðiþiklikler depoda da kaydediliyor.
+
+git diff cikarma.c // Çýkarma adlý c dosyasýndaki yapýlan deðiþiklikleri gösteriyor.
+
+git diff --staged 
+
+git rm bolme.c	//Dosyayý siliyor. Sonra commit ile belirtmemiz gerekir.
+
+git checkout .. bolme.c  //Çalýþma dizininden silinen dosyayý geri getirir*
+
+git reset HEAD bolme.c //Geçiþ bölgesine yolladýðým dizini geri alýyorum
+git checkout .. bolme.c  //Sonrasýnda ise içindeki verilerimi geri alýyorum
+
+
+git checkout e6125dd2115 -- . //Komple o versiyona dönmüþ oluyor eðer nokta yerine bir dosya ismi yazarsak sadece o dosyayý eski haline getirmiþ oluyoruz.
+e612li olan hash üstte yazýyor versiyon ekranýnda(git log)
+
+
+	
+
+.gitignore txt oluþturup içine git tarafýndan görülmesini istemediðimiz dosyalarý yazýyoruz ver git statuste gözükmüyor.
+
+
+touch dosya{1..5}.c 5 tane c dosyasý oluþturuyor.
+
+git branch 	//branchleri gösteriyor
+git branch --all//uzak depodaki tüm branchleri gösteriyor.
+
+git branch yeniDal    // yeni bir branch oluþturdu
+git checkout yeniDal  //yazýnca bu yeni dalý kulanmaya baþladým
+
+git diff master yenDal //iki branch arasýndaki farklýlýklarý gösteriyor.
+
+git merge yeniDal  	//Master ve yeniDal adlý branchi birleþtirdi.
+
+
+
+
+
+***
+Git 3 bölümden oluþuyor.
+
+Çalýþma dizinindeki dosyalarý "add" komutu ile geçiþ bölgesine aktarýlýr.
+
+Geçiþ bölgesinde "commit" komutuyla ise git deposuna gönderilmiþ oluyor.
+
+***
+
